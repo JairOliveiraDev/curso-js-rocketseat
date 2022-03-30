@@ -6,3 +6,5 @@ const person = {
 }
 
 console.log(person);
+// acessando propriedade do objeto
+console.log(person.name);
