@@ -13,3 +13,15 @@ commentary
 * snake_case
 * Escrever em inglês
 */
+
+let name = "jair";
+//verifica o tipo de dados que a variavel contem
+console.log(typeof name);
+
+//templates strings
+let age, isHuman;
+
+age = 34;
+isHuman = true;
+
+console.log(`o jair tem ${age}, ele é humano? ${isHuman}. `);
