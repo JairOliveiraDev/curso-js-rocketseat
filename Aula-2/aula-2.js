@@ -8,3 +8,5 @@ const person = {
 console.log(person);
 // acessando propriedade do objeto
 console.log(person.name);
+
+console.log(`Meu nome é ${person.name}, minha idade é ${person.age} Trabalho? ${person.working}!!`);
