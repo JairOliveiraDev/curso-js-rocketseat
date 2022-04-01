@@ -16,3 +16,11 @@ const sayYourName = function(nome) {
 }
 
 console.log(sayYourName());
+
+//arrow function
+
+const sayMyName1 = (name) => {
+    return name
+}
+
+console.log(sayMyName1('juca'));
