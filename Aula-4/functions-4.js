@@ -10,7 +10,7 @@ function sayMyName(nome) {
 //console.log(sayYourName());
 //função anonima
 // não ocorre o hoisting 
-const sayYourName = function(nome) {
+const sayYourName = function (nome) {
     nome = 'maike'
     return nome;
 }
@@ -24,3 +24,16 @@ const sayMyName1 = (name) => {
 }
 
 console.log(sayMyName1('juca'));
+
+
+//callback function
+function sayHello(hello) {
+    //console.log(hello)
+    hello() // chama uma função em callback
+}
+
+sayHello(
+    () => {
+        console.log('estou em uma callback')
+    }
+)
