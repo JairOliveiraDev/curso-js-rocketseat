@@ -18,3 +18,11 @@ console.log(word.toLowerCase());
 console.log(word.toUpperCase());
 
 //manipulando strings e arrays
+
+//separando strings
+let phrase = "Eu quero viver o amor";
+let myArray = phrase.split(' ');
+let phraseWithUnderscore = myArray.join("_");
+console.log(myArray);
+console.log(phraseWithUnderscore);
+console.log(phraseWithUnderscore.toUpperCase());
