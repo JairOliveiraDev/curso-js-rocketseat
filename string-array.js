@@ -17,3 +17,23 @@ console.log([
     function() {return "alo"},// função anonima dentro da array
 ][2]())// return function anonymous
 
+//transform a chain of character, in an element of array 
+let word = "manipulation";
+let characterToString = Array.from(word);
+console.log(Array.from(word));
+console.log(characterToString.length);
+
+
+//manipulation of array
+let techs = ["html", "css", "js"];
+//add items in the end of array
+techs.push("nodejs");
+//add items in the beginning of array
+techs.unshift("sql");
+//remove items in the end of array
+//remove items in the beginning of array
+// get one or more items in the array
+//remove one or more items in any position in the array
+// find a position, of an element in array
+
+console.log(techs);
