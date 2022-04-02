@@ -31,9 +31,19 @@ techs.push("nodejs");
 //add items in the beginning of array
 techs.unshift("sql");
 //remove items in the end of array
+//techs.pop();
 //remove items in the beginning of array
+//techs.shift();
 // get one or more items in the array
+let arraySlice = techs.slice(1, 3);
 //remove one or more items in any position in the array
+let indexRemove = techs.indexOf("html")
+techs.splice(indexRemove, 1);
+//techs.splice(1, 2)
 // find a position, of an element in array
+let index = techs.indexOf("css");
 
+
+console.log(arraySlice);
 console.log(techs);
+console.log(index);
