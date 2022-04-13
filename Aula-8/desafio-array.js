@@ -32,7 +32,7 @@ const bookByCategory = [{
             },
             {
                 title: "Ansiedade - Como enfrentar o mal do século",
-                author: "Augusto curry",
+                author: "Augusto Cury",
             },
             {
                 title: "Os 7 hábitos das pessoas altamente eficazes",
@@ -42,4 +42,42 @@ const bookByCategory = [{
     }
 ];
 
-console.log(bookByCategory);
+const totalCategory = bookByCategory.length;
+
+// mostra quantos autores tem em todas as categorias
+for (let category of bookByCategory) {
+    console.log(`total de livros da categoria: ${category.category}`);
+    console.log(category.books.length);
+}
+
+
+function countAuthors() {
+    let authors = [];
+
+    for (let category of bookByCategory) {
+        for (let book of category.books) {
+            if (authors.indexOf(book.author) == -1) {
+                authors.push(book.author);
+            }
+        }
+    }
+    console.log("total de autores", authors.length);
+}
+
+countAuthors();
+
+//mostrar livros baseado no autor passado como parametro
+function booksOfAuthor(author) {
+    let books = [];
+
+    for (let category of bookByCategory) {
+        for (let book of category.books) {
+            if (book.author === author) {
+                books.push(book.title);
+            }
+        }
+    }
+    console.log(`Livros do autor ${author}: ${books}`);
+}
+
+booksOfAuthor("Augusto Cury");
