@@ -38,6 +38,7 @@ function transformDegree(degree) {
     const celsiusExists = degree.toUpperCase().includes('C');
     const fahrenheitExists = degree.toUpperCase().includes('F');
 
+    // fluxo de erro
     if(!celsiusExists && !fahrenheitExists) {
         throw new Error('Grau não identificado');
     }
@@ -47,10 +48,11 @@ function transformDegree(degree) {
     let formula = fahrenheit => (fahrenheit - 32) * 5/9;
     let degreeSign = 'C';
 
-
+    // fluxo alternativo 
     if(celsiusExists) {
         updateDegree =Number(degree.toUpperCase().replace("C", ""));
         formula = celsius => celsius * 9/5 + 32;
+        degreeSign = 'F'
     }
 
     return formula(updateDegree) + degreeSign;
@@ -58,7 +60,8 @@ function transformDegree(degree) {
 
 try {
    console.log(transformDegree('98F'));
-   
+   console.log(transformDegree('32C'));
+   console.log(transformDegree('98G'));
 } catch(error) {
     console.log(error.message);
 }
