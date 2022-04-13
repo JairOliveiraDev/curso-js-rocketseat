@@ -77,7 +77,7 @@ function booksOfAuthor(author) {
             }
         }
     }
-    console.log(`Livros do autor ${author}: ${books}`);
+    console.log(`Livros do autor ${author}: ${books.join(", ")}`);
 }
 
 booksOfAuthor("Augusto Cury");
